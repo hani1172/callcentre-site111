@@ -1,14 +1,15 @@
 import "./Services.css";
 import bg from "../assets/services-bg.png";
-import {
-  Headphones,
-  Cpu,
-  BarChart3,
-  Globe
-} from "lucide-react";
+import { Headphones, Cpu, BarChart3, Globe } from "lucide-react";
 
 export default function Services() {
+  const isTouch =
+    typeof window !== "undefined" &&
+    window.matchMedia("(hover: none)").matches;
+
   const handleMouseMove = (e) => {
+    if (isTouch) return;
+
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
 
@@ -28,6 +29,7 @@ export default function Services() {
   };
 
   const handleMouseLeave = (e) => {
+    if (isTouch) return;
     e.currentTarget.style.transform = "translateY(0)";
   };
 
@@ -36,17 +38,16 @@ export default function Services() {
       className="services"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      {/* Cinematic layers */}
-      <div className="services-film"></div>
-      <div className="services-grid"></div>
-      <div className="services-noise"></div>
+      <div className="services-film" />
+      <div className="services-grid" />
+      <div className="services-noise" />
 
       <div className="services-panel">
         <span className="services-eyebrow">ENTERPRISE SERVICES</span>
 
         <h2>
-          Powering modern <br />
-          <span>call-centre operations</span>
+          Powering modern
+          <span> call-centre operations</span>
         </h2>
 
         <p>
@@ -62,7 +63,7 @@ export default function Services() {
           >
             <Headphones className="service-icon" />
             <h3>Voice Support</h3>
-            <div className="divider"></div>
+            <div className="divider" />
             <p>24/7 inbound & outbound calls with AI routing.</p>
             <span className="service-link">Explore →</span>
           </div>
@@ -74,7 +75,7 @@ export default function Services() {
           >
             <Cpu className="service-icon" />
             <h3>AI Resolution</h3>
-            <div className="divider"></div>
+            <div className="divider" />
             <p>Automated issue handling with real-time learning.</p>
             <span className="service-link">Explore →</span>
           </div>
@@ -86,7 +87,7 @@ export default function Services() {
           >
             <BarChart3 className="service-icon" />
             <h3>Live Analytics</h3>
-            <div className="divider"></div>
+            <div className="divider" />
             <p>Monitor agents, calls, and performance instantly.</p>
             <span className="service-link">Explore →</span>
           </div>
@@ -98,7 +99,7 @@ export default function Services() {
           >
             <Globe className="service-icon" />
             <h3>Global Scaling</h3>
-            <div className="divider"></div>
+            <div className="divider" />
             <p>Distributed systems built for enterprise growth.</p>
             <span className="service-link">Explore →</span>
           </div>
