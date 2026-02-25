@@ -2,6 +2,12 @@ import "./Footer.css";
 import logo from "../assets/logo.png";
 
 export default function Footer() {
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <footer className="footer">
       <div className="footer-inner">
@@ -9,10 +15,7 @@ export default function Footer() {
         {/* TOP */}
         <div className="footer-top">
           <div className="footer-brand">
-            <img
-              src={logo}
-              alt="DYD Communications"
-            />
+            <img src={logo} alt="DYD Communications" />
             <p>
               Reliable call-centre services built for scale,
               compliance, and performance.
@@ -22,24 +25,24 @@ export default function Footer() {
           <div className="footer-links">
             <div className="footer-col">
               <h4>Company</h4>
-              <a href="#services">Services</a>
-              <a href="#testimonials">Testimonials</a>
-              <a href="#contact">Contact</a>
+              <button onClick={() => scrollTo("services")}>Services</button>
+              <button onClick={() => scrollTo("testimonials")}>Testimonials</button>
+              <button onClick={() => scrollTo("contact")}>Contact</button>
             </div>
 
             <div className="footer-col">
               <h4>Operations</h4>
-              <a href="#">Inbound Calling</a>
-              <a href="#">Outbound Campaigns</a>
-              <a href="#">Quality Assurance</a>
-              <a href="#">Reporting</a>
+              <button type="button">Inbound Calling</button>
+              <button type="button">Outbound Campaigns</button>
+              <button type="button">Quality Assurance</button>
+              <button type="button">Reporting</button>
             </div>
 
             <div className="footer-col">
               <h4>Compliance</h4>
-              <a href="#">Data Protection</a>
-              <a href="#">Call Monitoring</a>
-              <a href="#">Security Standards</a>
+              <button type="button">Data Protection</button>
+              <button type="button">Call Monitoring</button>
+              <button type="button">Security Standards</button>
             </div>
           </div>
         </div>
