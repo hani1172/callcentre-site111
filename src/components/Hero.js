@@ -10,7 +10,7 @@ const Hero = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setStats(prev => ({
+      setStats((prev) => ({
         calls: prev.calls + Math.floor(Math.random() * 5 - 2),
         resolution: Math.max(
           60,
@@ -29,8 +29,7 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-container">
-
-        {/* LEFT SIDE */}
+        {/* LEFT */}
         <div className="hero-left fade-in">
           <p className="hero-tag">ENTERPRISE COMMUNICATION PLATFORM</p>
 
@@ -63,23 +62,9 @@ const Hero = () => {
               <span>Operations</span>
             </div>
           </div>
-
-          <h4 className="hero-subline">
-            TEAMWORK MAKES THE CALLS WORK.
-          </h4>
-
-          <div className="mini-bars">
-            {[40, 65, 55, 80, 60].map((v, i) => (
-              <div
-                key={i}
-                className="bar"
-                style={{ height: `${v}px` }}
-              />
-            ))}
-          </div>
         </div>
 
-        {/* RIGHT SIDE */}
+        {/* RIGHT */}
         <div className="hero-right fade-in">
           <div className="live-card">
             <h3>Live system</h3>
@@ -107,7 +92,6 @@ const Hero = () => {
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
