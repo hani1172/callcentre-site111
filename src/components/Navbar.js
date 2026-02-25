@@ -6,7 +6,6 @@ const NAV_HEIGHT = 80;
 
 export default function Navbar() {
   const [active, setActive] = useState("home");
-  const [orange, setOrange] = useState(false);
 
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
@@ -34,25 +33,21 @@ export default function Navbar() {
 
       if (contact && scrollY >= contact.offsetTop) {
         setActive("contact");
-        setOrange(false);
         return;
       }
 
       if (testimonials && scrollY >= testimonials.offsetTop) {
         setActive("testimonials");
-        setOrange(false);
         return;
       }
 
       if (services && scrollY >= services.offsetTop) {
         setActive("services");
-        setOrange(false);
         return;
       }
 
       if (home) {
         setActive("home");
-        setOrange(false);
       }
     };
 
@@ -63,7 +58,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`navbar ${orange ? "navbar-orange" : ""}`}>
+    <nav className="navbar">
       <div className="nav-left">
         <img
           src={logo}
