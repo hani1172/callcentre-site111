@@ -1,0 +1,28 @@
+.heatmap {
+  background: linear-gradient(180deg, #0b1220, #070b12);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06);
+}
+
+.heatmap h4 {
+  font-size: 12px;
+  color: #9aa4b2;
+  margin-bottom: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.cell {
+  height: 14px;
+  border-radius: 3px;
+  background: #1f2937;
+}
+
+.lvl-1 { background: rgba(220,59,17,.25); }
+.lvl-2 { background: rgba(220,59,17,.45); }
+.lvl-3 { background: rgba(220,59,17,.75); }

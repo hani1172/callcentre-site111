@@ -1,0 +1,26 @@
+.stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 32px;
+}
+
+.stat h3 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.stat p {
+  font-size: 13px;
+  color: #777;
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}

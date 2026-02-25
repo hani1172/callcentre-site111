@@ -1,0 +1,200 @@
+.how {
+  position: relative;
+  background: #070b10;
+  overflow: hidden;
+  padding-top: 120px; /* 🔑 pushes it beneath previous section */
+}
+
+/* ============================= */
+/* GRID BACKGROUND (MATCH HERO)  */
+/* ============================= */
+
+.how::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.08) 0px,
+      rgba(255,255,255,0.08) 1px,
+      transparent 1px,
+      transparent 56px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.08) 0px,
+      rgba(255,255,255,0.08) 1px,
+      transparent 1px,
+      transparent 56px
+    );
+  opacity: 0.35;
+  z-index: 0;
+}
+
+/* ============================= */
+/* ORANGE AMBIENT LIGHT          */
+/* ============================= */
+
+.how::after {
+  content: "";
+  position: absolute;
+  inset: -30%;
+  background: radial-gradient(
+    600px 600px at 20% 30%,
+    rgba(220,59,17,0.14),
+    transparent 60%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ============================= */
+/* SHARED INNER CONTAINER        */
+/* ============================= */
+
+.how-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+/* ============================= */
+/* VIDEO                         */
+/* ============================= */
+
+.how-video-wrap {
+  position: relative;
+  height: 48vh;
+  min-height: 360px;
+  max-height: 520px;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.how-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85) contrast(1);
+}
+
+/* Fade */
+.how-video-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(7,11,16,0.2),
+    rgba(7,11,16,0.95)
+  );
+}
+
+/* ============================= */
+/* CONTENT                       */
+/* ============================= */
+
+.how-content {
+  margin-top: -40px;
+  padding: 80px 0 140px;
+}
+
+.how-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.35em;
+  color: #8b9bb4;
+}
+
+.how h2 {
+  font-size: 40px;
+  margin: 16px 0 18px;
+  color: white;
+  line-height: 1.15;
+}
+
+.how h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin-top: 18px;
+  background: linear-gradient(
+    90deg,
+    #dc3b11,
+    rgba(220,59,17,0.3),
+    transparent
+  );
+}
+
+.how-intro {
+  max-width: 520px;
+  color: #b6c0cc;
+  line-height: 1.7;
+  margin: 26px 0 70px;
+}
+
+/* ============================= */
+/* STEPS                         */
+/* ============================= */
+
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px 80px;
+}
+
+.how-step {
+  position: relative;
+  padding-left: 48px;
+}
+
+.how-index {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  color: rgba(220,59,17,0.75);
+}
+
+.how-step h3 {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.how-step p {
+  font-size: 14px;
+  color: #aeb8c6;
+  line-height: 1.6;
+}
+
+/* ============================= */
+/* RESPONSIVE                    */
+/* ============================= */
+
+@media (max-width: 1000px) {
+  .how {
+    padding-top: 90px;
+  }
+
+  .how-inner {
+    padding: 0 32px;
+  }
+
+  .how-content {
+    padding: 60px 0 120px;
+    margin-top: -20px;
+  }
+
+  .how-steps {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .how-video-wrap {
+    height: 42vh;
+  }
+}

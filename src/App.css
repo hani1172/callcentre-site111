@@ -1,0 +1,30 @@
+/* ---------- GLOBAL SCROLL BEHAVIOR ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px; /* keeps header from covering content */
+}
+
+body {
+  margin: 0;
+  background-color: var(--text-light);
+  color: var(--text-main);
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* 🤌 fade-in animation for all sections */
+.fade-section {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 1.3s ease, transform 1.3s ease;
+  will-change: opacity, transform;
+}
+.show-section {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* prevent content from hiding under header */
+main {
+  margin-top: 120px;
+}

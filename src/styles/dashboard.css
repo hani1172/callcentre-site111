@@ -1,0 +1,35 @@
+.dashboard {
+  padding: 120px 72px;
+  text-align: center;
+}
+
+.dashboard h2 {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.dashboard p {
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+.dashboard-mock {
+  margin: 0 auto;
+  max-width: 900px;
+  height: 420px;
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #020617
+  );
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 14px;
+  padding: 18px;
+}
+
+.dashboard-mock div {
+  background: rgba(255,255,255,0.08);
+  border-radius: 14px;
+}

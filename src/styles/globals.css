@@ -1,0 +1,23 @@
+:root {
+  --orange: #dc3b11;
+  --bg-dark: #07090c;
+  --bg-panel: #0e1420;
+  --text-main: #ffffff;
+  --text-muted: #9aa4b2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+main {
+  min-height: 100vh;
+}

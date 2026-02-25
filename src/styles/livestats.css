@@ -1,0 +1,26 @@
+.live-stats {
+  margin: 40px auto;
+  max-width: 920px;
+  padding: 24px 36px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.05);
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat span {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.stat strong {
+  display: block;
+  font-size: 28px;
+  margin-top: 6px;
+}
